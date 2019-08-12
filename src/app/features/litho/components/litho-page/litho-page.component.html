@@ -2,7 +2,7 @@
   <ion-grid text-center >
     <ion-row>
       <ion-col text-center>
-          <ion-searchbar (ionChange)="searchChanged($event)"></ion-searchbar>
+          <ion-searchbar (ionChange)="searchChanged()"></ion-searchbar>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -12,7 +12,7 @@
         </h1>
         <ion-item> </ion-item>
         <ion-item> </ion-item>
-        <ion-item *ngFor="let item of (lithoData | async)">
+        <ion-item *ngFor="let item of (lithoData$ | async)">
             {{ item.name }}
             {{ item.color }}     
         </ion-item>
