@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-grid text-center >
+    <ion-row>
+      <ion-col text-center>
+          <ion-searchbar (ionChange)="searchChanged($event)"></ion-searchbar>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1>
+            <ion-card-title>Litho </ion-card-title>
+        </h1>
+        <ion-item> </ion-item>
+        <ion-item> </ion-item>
+        <ion-item *ngFor="let item of (lithoData | async)">
+            {{ item.name }}
+            {{ item.color }}     
+        </ion-item>
+        <!-- <img [src]="item.img" *ngIf="item.img != 'N/A'"> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
