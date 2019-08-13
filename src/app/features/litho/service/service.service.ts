@@ -24,9 +24,10 @@ export class LithoService {
     .pipe(
         map( results => results[ 'Search' ] )
     );
+
   }
 
   getDetails( id ) {
-    return this.http.get( `${this.url}?i=${id}&plot=full` );
+    return this.http.get( `${this.url}?i=${id}` );
   }
 }

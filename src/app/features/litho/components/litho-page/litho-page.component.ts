@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class LithoPageComponent implements OnInit {
 
   lithoData$: Observable<any>;
-  searchTerm: string = '';
+  searchTerm = '';
   type: SearchType = SearchType.all;
 
 
@@ -22,6 +22,7 @@ export class LithoPageComponent implements OnInit {
   searchChanged() {
     // Call our service function which returns an Observable
     this.lithoData$ = this.lithoService.searchData(this.searchTerm, this.type);
+    console.log( this.lithoData$ );
   }
 
 }

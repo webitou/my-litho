@@ -2,6 +2,7 @@
   <ion-grid text-center >
     <ion-row>
       <ion-col text-center>
+        {{ lithoData$ | async | json }}
           <ion-searchbar (ionChange)="searchChanged()"></ion-searchbar>
       </ion-col>
     </ion-row>
